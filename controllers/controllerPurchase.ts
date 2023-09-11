@@ -9,18 +9,18 @@ export const postNewPurchase = async (req: Request, res: Response) => {
 
     const mailOptions = {
       from: "no-reply@ecommerce.com",
-      to: `${data.email}`,
+      to: data.email,
       subject: "Comprar Ecommerce",
       text: result,
     };
 
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Email enviado: " + info.response);
-      }
-    });
+    // transporter.sendMail(mailOptions, function (error, info) {
+    //   if (error) {
+    //     console.log(error);
+    //   } else {
+    //     console.log("Email enviado: " + info.response);
+    //   }
+    // });
 
     return res.json(result);
   } catch (error) {

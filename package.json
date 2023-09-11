@@ -7,7 +7,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "start": "nodemon src/server.ts",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
     "@types/cors": "^2.8.14",
     "@types/node": "^20.6.0",
     "@types/nodemailer": "^6.4.9",
+    "nodemon": "^3.0.1",
     "prisma": "^5.2.0",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
